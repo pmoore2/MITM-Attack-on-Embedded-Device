@@ -9,3 +9,5 @@ To recover the AES encryption public key of the new firmware, I implemented an M
 To perform this attack, I connected the GND pin on the chipwhisperer to the GND pin on the arduino. I connected the TX on the arduino to the TX on the chipwhisperer and the RX on the arduino to the RX on the chipwhisperer. Lastly, I connected the nRST pin on the chipwhisperer to the GND pin on the arduino to force the nRST of the chipwhisperer to be low. A picture is attached below of my hardware setup.
 
 ![alt text](https://github.com/pmoore2/MITM-Attack-on-Embedded-Device/blob/main/images/MITM_CW.png "Hardware Setup")
+
+The non-privileged Python client programs `connection.ipynb`, `utils.py`, and `client.py` are not provided in this repository. `connection.ipynb` coordinates the ECDH key exchange with the chipwhisperer nano. `utils.py` helper functions for verifying ECDSA signatures and generating pseudorandom values. `client.py` defines functions for performing and analyzing ECDSA operations.
