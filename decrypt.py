@@ -14,8 +14,6 @@ def decrypt_aes_blocks(encrypted_data_hex, key):
             if len(block) < 16:
                 block += b'\x00' * (16 - len(block))
             decrypted_blocks.append(cipher.decrypt(block))
-            # if cipher.decrypt(block).decode('ascii', errors='ignore').strip() == 'EmbeddedSecurity':
-            #     memory = block
 
         return [data.decode('ascii', errors='ignore').strip() for data in decrypted_blocks]
     
@@ -42,9 +40,10 @@ def parse_hex_file(hex_string):
     
     return data_bytes
 
-key = "10358899ahnelson"
+key = #key
+fp = #frimware_file_path
 
-with open('./micro-ecc-CWNANO.hex', 'r') as file:
+with open(fp, 'r') as file:
     hex_file = file.read()
 
 encrypted_hex = ''.join(parse_hex_file(hex_file))
@@ -56,5 +55,3 @@ for i in decrypted_text:
     if len(i) == 16:
         print(i)
 # print(decrypted_text)
-
-# 01 b9 29 38 ed 3d 50 93 11 73 c3 11 60 4f 97 bb is the secret key in memory address is 080042f0 - 080042ff
