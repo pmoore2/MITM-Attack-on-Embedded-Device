@@ -8,4 +8,4 @@ To recover the AES encryption public key of the new firmware, I implemented an M
 
 To perform this attack, I connected the GND pin on the chipwhisperer to the GND pin on the arduino. I connected the TX on the arduino to the TX on the chipwhisperer and the RX on the arduino to the RX on the chipwhisperer. Lastly, I connected the nRST pin on the chipwhisperer to the GND pin on the arduino to force the nRST of the chipwhisperer to be low. A picture is attached below of my hardware setup.
 
-![alt text](https://github.com/pmoore2/MITM-Attack-on-Embedded-Device/blob/main/images/MITM_CW.png "Hardware Setup"){style="display:block; margin:auto;"}
+![alt text](https://github.com/pmoore2/MITM-Attack-on-Embedded-Device/blob/main/images/MITM_CW.png "Hardware Setup")
